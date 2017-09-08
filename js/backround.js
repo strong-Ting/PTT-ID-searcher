@@ -10,12 +10,13 @@ chrome.commands.onCommand.addListener(function(command)
 
  function run()
     {
-    //    var link_arry = google_crawler();
-    //    console.log(link_arry);
-      //  google_crawler();
-        link ='https://www.ptt.cc/bbs/Gossiping/M.1501340303.A.781.html';
-        data = PTT_content(link);
-
+//        var link_arry = google_crawler();
+//        link ='https://www.ptt.cc/bbs/Gossiping/M.1501340303.A.781.html';
+//        data = PTT_content(link);
+         chrome.tabs.create({url: "http://140.125.207.210:5000",
+                             active: true,
+                             index: 0   });
+         //   focus();
 
 
     }
