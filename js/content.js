@@ -1,35 +1,16 @@
-/*      chrome.devtools.network.onRequestFinished.addListener(
-          function(request) {
-            if (request.response.bodySize > 40*1024) {
-              chrome.devtools.inspectedWindow.eval(
-                  'console.log("Large image: " + unescape("' +
-                  escape(request.request.url) + '"))');
-            }
-      });*/
-//$('.gsc-wrapper').toggle();
-//$('.gsc-wrapper').show();
-
- var cb = document.getElementById('cse-hosted'); 
-//console.log(cb.innerHTML);
-
-$('.gsc-resultsRoot.gsc-tabData.gsc-tabdActive').hide(); //hide content
-
-var div=document.getElementsByTagName('div');
-/*
-for(var conetnt in div)
+function get_data()
 {
-    console.log(conetnt);
-}*/
-for(var i=0;i<div.length;i++)
-{
-    console.log(div[i]);
+    var data = document.querySelector('.gsc-webResult.gsc-result');
+    if(data != null)
+    {
+        clearInterval(num);
+        main(data);
+    }
 }
-$(window).load(function()
+var num = setInterval("var data = get_data();", 100)
+
+function main(data)
 {
-console.log('yeee');
-alert('yeee');
-
-
-});
-
+    console.log(data);
+}
 
